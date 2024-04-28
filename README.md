@@ -3,7 +3,7 @@ a console environment. You should probably be doing this in a
 Google Cloud VM as described in *week 4 discussion slides*, rather than on
 your own computer.
 
-
+# First time setup
 
 ### Cloning the Repo
 
@@ -53,17 +53,29 @@ rm wget-log
 
 ```
 
+# Everytime you reopen terminal
+
+### Pull any updates from GitHub
+
+if there's merge conflicts or anything like that let Hassan know, but this usually should
+go smoothly.
+
+```
+
+git pull origin
+
+```
+
+### Jump into the python environment
+
+```
+
+source venv/bin/activate
+
+```
 
 
-
-
-
-
-
-
-VVVVVV this is the old README
-
-# LLM-based-IND
+# (OLD READ-ME) LLM-based-IND
 
 ## intro
 - finetune ChatGLM3-6b 32k
