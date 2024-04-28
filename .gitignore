@@ -1,3 +1,11 @@
 venv/
 
-data/
+dataset/
+
+wget-log
+
+*.zip
+
+IND-WhoIsWho.zip?rlkey=cg6tbubqo532hb1ljaz70tlxe
+
+__MACOSX/
