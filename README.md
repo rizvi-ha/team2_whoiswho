@@ -53,6 +53,24 @@ rm wget-log
 
 ```
 
+### Downloading the Pretained Model
+
+```
+
+wget https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/kddcup-2024/IND-WhoIsWho/ind_chatglm_ckpt_1000.zip
+
+```
+
+wait a min or two... then run
+
+```
+
+unzip ind_chatglm_ckpt_1000.zip
+
+rm ind_chatglm_ckpt_1000.zip
+
+```
+
 # Everytime you reopen terminal
 
 ### Pull any updates from GitHub
