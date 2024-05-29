@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 tokenizers==0.11.2
+=======
+tokenizers>=0.11.2
+>>>>>>> 67e99b5c46be349a695e6fe81d527093ddb6507f
 torch>=2.1.0
 gradio>=4.19.2
 sentencepiece>=0.2.0
