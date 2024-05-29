@@ -3,7 +3,7 @@
 set -ex
 
 LR=3e-5
-NUM_GPUS=7
+NUM_GPUS=1
 LORA_RANK=32
 LORA_ALPHA=64
 LORA_DROUPOUT=0.05
@@ -18,7 +18,7 @@ WARMUP_RATIO=0.03
 SCHEDULAR=cosine
 
 RUN_NAME=text
-BASE_MODEL_PATH=./checkpoint-1000/
+BASE_MODEL_PATH=THUDM/chatglm-6b
 PUB_PATH=./dataset/IND-WhoIsWho/pid_to_info_all.json
 TRAIN_PATH=./dataset/IND-WhoIsWho/train_author.json
 DATESTR=`date +%Y%m%d-%H%M%S`
@@ -48,6 +48,6 @@ torchrun --standalone --nnodes=1 --nproc_per_node=$NUM_GPUS  finetune.py \
     --logging_steps 1 \
     --save_steps $SAVE_INTERVAL \
     --learning_rate $LR \
-    --bf16 \
+    --fp16 \
     --deepspeed configs/deepspeed.json  2>&1 | tee ${OUTPUT_DIR}/train.log
 
