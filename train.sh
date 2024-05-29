@@ -8,8 +8,8 @@ LORA_RANK=32
 LORA_ALPHA=64
 LORA_DROUPOUT=0.05
 
-MAX_SOURCE_LEN=25000 # longer context contains more paper titles, but cost longer train time and larger memory usage
-MAX_TARGET_LEN=16
+MAX_SOURCE_LEN=5000 # longer context contains more paper titles, but cost longer train time and larger memory usage
+MAX_TARGET_LEN=8
 DEV_BATCH_SIZE=1
 GRAD_ACCUMULARION_STEPS=16
 EPOCH=4
@@ -48,6 +48,6 @@ torchrun --standalone --nnodes=1 --nproc_per_node=$NUM_GPUS  finetune.py \
     --logging_steps 1 \
     --save_steps $SAVE_INTERVAL \
     --learning_rate $LR \
-    --fp16 \
+    --fp16
     --deepspeed configs/deepspeed.json  2>&1 | tee ${OUTPUT_DIR}/train.log
 
